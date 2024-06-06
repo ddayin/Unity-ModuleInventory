@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Inventory
+namespace InventoryModule
 {
     public class GameManager : MonoBehaviour
     {
