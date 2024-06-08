@@ -4,6 +4,16 @@ using UnityEngine.UI;
 
 namespace InventoryModule
 {
+    [Serializable]
+    public class ItemModel
+    {
+        public string id;
+        public string name;
+        public string category;
+        public string description;  // temp
+    }
+    
+    [RequireComponent(typeof(Image))]
     public class InventoryItem : MonoBehaviour
     {
         private Image m_Icon;
