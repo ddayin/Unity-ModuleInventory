@@ -1,19 +1,16 @@
+using System;
+using UnityCommunity.UnitySingleton;
 using UnityEngine;
 
 namespace InventoryModule
 {
-    public class GameManager : MonoBehaviour
+    public class GameManager : PersistentMonoSingleton<GameManager>
     {
-        // Start is called once before the first execution of Update after the MonoBehaviour is created
-        void Start()
-        {
-            
-        }
+        private InventoryContainer m_InventoryContainer;
 
-        // Update is called once per frame
-        void Update()
+        protected override void Awake()
         {
-            
+            base.Awake();
         }
     }
 }
