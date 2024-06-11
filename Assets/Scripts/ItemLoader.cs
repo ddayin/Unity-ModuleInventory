@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
@@ -6,8 +7,10 @@ namespace InventoryModule
 {
     public class ItemLoader : MonoBehaviour
     {
-        public SerializableDictionary<string, Sprite>
-            m_DictionarySprites = new SerializableDictionary<string, Sprite>();
+        private Dictionary<string, Sprite> m_DictionarySprites = new Dictionary<string, Sprite>();
+        
+        public List<Sprite> m_ListArmorSprites = new List<Sprite>();
+        public List<Sprite> m_ListWeaponSprites = new List<Sprite>();
         
         private void Awake()
         {
